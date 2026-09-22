@@ -231,7 +231,7 @@ int swapNibblePairs(int x) {
   int lowNib = x & mask0F;
   int highNib = x & maskF0;
   int highShifted = (highNib >> 4) & mask0F;
-  return (lowNib << 4) | (highNib >> 4);
+  return (lowNib << 4) | highShifted;
 }
 
 // P7
